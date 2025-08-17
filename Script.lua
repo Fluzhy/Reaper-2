@@ -22,9 +22,10 @@ end
 
 local function removePlayerESP(player)
     for _, player in ipairs(Players:GetPlayers()) do
-    if player then
+    if player and player ~= Players.LocalPlayer then
         ESP = player.Character.Head.ESP
         ESP:Destroy()
+    end
     end
 end
 
