@@ -20,6 +20,15 @@ local function createPlayerESP(player)
     Billboard.Parent = head
 end
 
+local function removePlayerESP(player)
+    for _, player in ipairs(Players:GetPlayers()) do
+    if player then
+        ESP = player.Character.Head.ESP
+        ESP:Destroy()
+    end
+end
+
+
 -- For players already in the game
 for _, player in ipairs(Players:GetPlayers()) do
     if player ~= Players.LocalPlayer then
