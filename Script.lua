@@ -58,6 +58,7 @@ local function createPlayerESP(player)
     end
 
     player.CharacterAdded:Connect(setupESP)
+
 end
 
 -- Remove ESP for a player
@@ -69,15 +70,4 @@ local function removePlayerESP(player)
     end
 end
 
--- Track all players
-for _, player in ipairs(Players:GetPlayers()) do
-    if player ~= Players.LocalPlayer then
-        createPlayerESP(player)
-    end
-end
-
-Players.PlayerAdded:Connect(function(player)
-    if player ~= Players.LocalPlayer then
-        createPlayerESP(player)
-    end
-end)
+createPlayerESP()
