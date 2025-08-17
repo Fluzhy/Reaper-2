@@ -1,5 +1,6 @@
+local Players = game:GetService('Players')
+
 local function createPlayerESP(player)
-    local Players = game:GetService('Players')
     local character = player.Character or player.CharacterAdded:Wait()
     local head = character:WaitForChild('Head')
 
