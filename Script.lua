@@ -20,16 +20,6 @@ local function createPlayerESP(player)
     Billboard.Parent = head
 end
 
-function removePlayerESP(player)
-    if player.Character then
-        for _, obj in pairs(player.Character:GetDescendants()) do
-            if obj:IsA("BillboardGui") and obj.Name == "PlayerESP" then
-                obj:Destroy()
-            end
-        end
-    end
-end
-
 -- For players already in the game
 for _, player in ipairs(Players:GetPlayers()) do
     if player ~= Players.LocalPlayer then
