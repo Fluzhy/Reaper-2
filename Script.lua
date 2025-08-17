@@ -69,5 +69,3 @@ local function removePlayerESP(player)
         espSquares[player] = nil
     end
 end
-
-createPlayerESP()
